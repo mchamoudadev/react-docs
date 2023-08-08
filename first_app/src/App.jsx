@@ -1,9 +1,9 @@
-import List from "./List";
+import TailwindCss from "./TailwindCss";
 
 export const App = function () {
 	return (
 		<>
-			<List />
+			<TailwindCss />
 		</>
 	);
 };
