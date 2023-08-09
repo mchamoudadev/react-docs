@@ -1,9 +1,20 @@
-import TailwindCss from "./TailwindCss";
+import { useState, useReducer } from "react";
 
-export const App = function () {
+import ThemeProvider from "./ThemeProvider";
+import Header from "./Header";
+import Footer from "./Footer";
+import Hero from "./Hero";
+import { Outlet } from "react-router-dom";
+
+export const App = () => {
+	// const [counter, setCounter] = useState(0);
+
 	return (
-		<>
-			<TailwindCss />
-		</>
+		<ThemeProvider>
+			{/* children */}
+			<Header />
+			<Outlet />
+			<Footer />
+		</ThemeProvider>
 	);
 };
